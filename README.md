@@ -24,7 +24,7 @@ Optionally
 You can install the lib via [Composer](http://getcomposer.org/). Run the following command:
 
 ```bash
-composer require kassacom/php-sdk
+composer require ZubyakDR/php-sdk
 ```
 
 To use the bindings, use Composer's [autoload](https://getcomposer.org/doc/01-basic-usage.md#autoloading):
