@@ -329,8 +329,11 @@ trait GetPaymentResponseTrait
      *
      * @return $this
      */
-    public function setStatusDescription(?string $statusDescription)
+    public function setStatusDescription($statusDescription)
     {
+        if ((null !== $statusDescription) && !is_string($statusDescription)) {
+            throw new \InvalidArgumentException("statusDescription must be string on null");
+        }
         $this->statusDescription = $statusDescription;
 
         return $this;

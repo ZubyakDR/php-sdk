@@ -183,8 +183,11 @@ class PaymentMethodDataItem extends AbstractRequestItem
      *
      * @return $this
      */
-    public function setCapture(?bool $capture)
+    public function setCapture($capture)
     {
+        if ((null !== $capture) && !is_bool($capture)) {
+            throw new \InvalidArgumentException("statusDescription must be string on null");
+        }
         $this->capture = $capture;
 
         return $this;
